@@ -20,6 +20,8 @@
 
         <h1> {{ isActive ? 'isActive' : 'isNotActive' }} </h1>
 
+        <h1> {{ message.split('').reverse('').join('') }} </h1>
+
     </div>
 
     <!-- VueJS CDN -->
@@ -35,6 +37,7 @@
                 menu: 'My menu data here',
                 number: 10,
                 isActive: false,
+                message: 'Hello',
             }
         });
     </script>
