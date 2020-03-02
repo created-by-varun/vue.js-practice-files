@@ -17,19 +17,24 @@
         <p v-text="content">  </p>
 
         <h2>{{number + 10}}</h2>
+
+        <h1> {{ isActive ? 'isActive' : 'isNotActive' }} </h1>
+
     </div>
 
+    <!-- VueJS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
     <script>
-        new Vue({
+        let vm = new Vue({
             el: '#app',
 
             data: {
                 title: 'My title',
                 content: 'This is my text',
                 menu: 'My menu data here',
-                number: 10
+                number: 10,
+                isActive: false,
             }
         });
     </script>
