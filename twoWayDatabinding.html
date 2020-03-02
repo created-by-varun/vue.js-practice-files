@@ -17,14 +17,41 @@
         <form action="">
 
             <div class="col-6">
+                <br>
                 <input v-model="message" type="text" class="form-control">
                 <br>
                 {{message}}
             </div>
+            <hr>
 
-            
+            <fieldset class="form-group">
+                <legend>RadioButtons</legend>
+
+                <div class="form-check">
+                    <label class=form-check-label>
+                        <input v-model="options" type="checkbox" name="option1" id="1" value="option-1">
+                        Option one contains this and that. Lorem ipsum dolor sit, amet consectetur adipisicing.
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <label class=form-check-label>
+                        <input v-model="options" type="checkbox" name="option2" id="2" value="option-2">
+                        Option two. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, nostrum!
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <label class=form-check-label>
+                        <input v-model="options" type="checkbox" name="option3" id="3"  value="option-3">
+                        Three Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente.
+                    </label>
+                </div>
+            </fieldset>
 
         </form>
+
+        <p> You selected: {{ options.join(', ') }} </p>
 
     </div>
 
@@ -38,6 +65,7 @@
 
             data: {
                 message: '',
+                options: [],
             }
         });
     </script>
