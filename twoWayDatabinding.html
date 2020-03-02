@@ -14,6 +14,18 @@
 
     <div id="app">
 
+        <form action="">
+
+            <div class="col-6">
+                <input v-model="message" type="text" class="form-control">
+                <br>
+                {{message}}
+            </div>
+
+            
+
+        </form>
+
     </div>
 
     <!-- VueJS CDN -->
@@ -25,7 +37,7 @@
             el: '#app',
 
             data: {
-                
+                message: '',
             }
         });
     </script>
