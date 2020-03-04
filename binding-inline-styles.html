@@ -14,23 +14,6 @@
 
     <div id="app">
 
-        <a :href="url"> {{url}} </a>
-
-
-        <h1>{{number}}</h1>
-
-        <h2 v-on:click="number++">Increase</h2>  <!-- v-on: same as @ -->
-        <h2 @click="number--">Decrease</h2>
-
-        <hr>
-        <form action="" @submit.prevent = "number++">
-
-            <button type="submit">Increase again</button>
-
-        </form>
-
-
-
     </div>
 
     <!-- VueJS CDN -->
@@ -42,8 +25,7 @@
             el: '#app',
 
             data: {
-                url: 'https://varunv321.itch.io',
-                number: 10,
+                
             }
         });
     </script>
