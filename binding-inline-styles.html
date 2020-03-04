@@ -19,6 +19,8 @@
 
         <div :style="styleObject"> {{message}} </div>
 
+        <div :style="[styleObject, styleObject2]"> {{message}} </div>
+
 
     </div>
 
@@ -36,6 +38,11 @@
                 styleObject: {
                     color: 'blue',
                     fontSize: '30px',
+                },
+
+                styleObject2: {
+                    color: 'yellow',
+                    fontSize: '100px'
                 }
             }
         });
