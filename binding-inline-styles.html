@@ -13,7 +13,13 @@
 
 
     <div id="app">
+
         <h1 :style="{color: 'red', fontSize: fontSize + 'px'}">{{ message }}</h1>
+
+
+        <div :style="styleObject"> {{message}} </div>
+
+
     </div>
 
     <!-- VueJS CDN -->
@@ -27,6 +33,10 @@
             data: {
                 message: "Hello",
                 fontSize: 60,
+                styleObject: {
+                    color: 'blue',
+                    fontSize: '30px',
+                }
             }
         });
     </script>
