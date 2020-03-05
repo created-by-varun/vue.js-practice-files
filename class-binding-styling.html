@@ -9,11 +9,20 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
+<style>
+    .active{
+        color: green;
+    }
+    .notActive{
+        color: red;
+    }
+</style>
+
 <body>
 
 
     <div id="app">
-
+        <h1 :class="{active: isActive, notActive: !isActive}"> {{ name }} </h1>
     </div>
 
     <!-- VueJS CDN -->
@@ -25,7 +34,9 @@
             el: '#app',
 
             data: {
-                
+                isActive: false,
+
+                name: 'Edwin',
             }
         });
     </script>
